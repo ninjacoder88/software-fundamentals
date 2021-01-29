@@ -13,3 +13,4 @@
 - Basic SQL Queries
 - Design Patterns
 - Refactoring
+- Basic git
