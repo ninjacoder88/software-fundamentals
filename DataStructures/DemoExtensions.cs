@@ -17,7 +17,7 @@ namespace DataStructures
             var array = stack.ToArray();
 
             foreach(var item in array)
-                Console.WriteLine(item.ToString());
+                Console.Write(item.ToString() + "\t");
         }
 
         public static void Print<T>(this Queue<T> queue)
@@ -25,7 +25,7 @@ namespace DataStructures
             var array = queue.ToArray();
 
             foreach(var item in array)
-                Console.WriteLine(item.ToString());
+                Console.Write(item.ToString() + "\t");
         }
 
         public static void Print<T>(this LinkedList<T> linkedList)
