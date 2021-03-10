@@ -95,8 +95,9 @@ Operators are symbols that represent logic such as and, or, not, etc
 ! - Not
 && - And
 || - Or
-+=, *=, -= - 
-++
++=, *=, -= - Increment
+++ - Increment by 1
+-- - Decrement by 1
 == - Equals
 = - Assignment
 < > - LT, GT

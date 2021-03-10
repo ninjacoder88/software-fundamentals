@@ -8,14 +8,24 @@ namespace FlowOfControl
         {
             Console.WriteLine("Start");
 
-            var a = 2;
-            var b = 2;
-            var r = a + b;
+            int a = 1;
+            int b = 1;
 
-            if(r == 4)
-            {
-                Console.WriteLine("4");
-            }
+            Console.WriteLine(a);
+            Console.WriteLine(a++);
+            Console.WriteLine(a);
+            Console.WriteLine(a++);
+            Console.WriteLine(a);
+
+            Console.WriteLine("---");
+
+            Console.WriteLine(b);
+            Console.WriteLine(++b);
+            Console.WriteLine(b);
+            Console.WriteLine(++b);
+            Console.WriteLine(b);
+            
+            Console.WriteLine("End");
         }
     }
 }
