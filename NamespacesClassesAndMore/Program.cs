@@ -16,7 +16,7 @@ namespace NamespacesClassesAndMore
 
             foreach(var p in processors)
             {
-                p.ProcessFile();
+                //p.ProcessFile();
             }
         }
     }
