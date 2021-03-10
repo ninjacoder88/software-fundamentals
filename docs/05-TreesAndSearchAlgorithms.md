@@ -57,12 +57,12 @@ public class Tree
 		{
 			var current = queue.Dequeue();
 			
-			if(current == null)
-				return;
-				
 			Console.WriteLine(current.Value);
-			queue.Enqueue(current.Left);
-			queue.Enqueue(current.Right);
+			if(current.Left != null)
+				queue.Enqueue(current.Left);
+
+			if(current.Right != null)
+				queue.Enqueue(current.Right);
 		}
     }
 
@@ -108,11 +108,51 @@ Search algorithms and sorting algorithms are the most frequent users of recursio
 ```
 public void DisplayDFSRecursive(Node node)
 {
-    Console.WriteLine(node.Value);
+    Console.WriteLine($"Start {node.Value}");
     if(node.Left != null)
         DisplayDFSRecursive(node.Left);
         
     if(node.Right != null)
         DisplayDFSRecursive(node.Right);
+		
+	Console.WriteLine($"Stop {node.Value}");
+}
+```
+
+**What are generics?**
+Generics are a way of defining some functionality that can operate on different types.
+This is seen most often with List, Stack, Queue, etc. 
+
+```
+public class Node<T>
+{
+    public T Value {get;set;}
+
+    public Node<T> Left {get;set;}
+
+    public Node<T> Right {get;set;}
+}
+
+public class Tree<T>
+{
+    public Node<T> Root {get;set;}
+
+    public void DisplayBFS()
+    {
+        Queue<TreeNode<T>> queue = new Queue<TreeNode<T>>();
+        queue.Enqueue(Root);
+
+        while(queue.Count > 0)
+        {
+            TreeNode<T> current = queue.Dequeue();
+
+            Console.WriteLine(current.Value);
+            if(current.Left != null)
+                queue.Enqueue(current.Left);
+
+            if(current.Right != null)
+                queue.Enqueue(current.Right);
+        }
+    }
 }
 ```
