@@ -21,7 +21,7 @@ namespace BasicGraph
 
         public void AddEdge(Edge edge)
         {
-            
+            Edges.Add(edge);
         }
     }
 }

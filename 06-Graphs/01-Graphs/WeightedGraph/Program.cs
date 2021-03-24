@@ -13,10 +13,13 @@ namespace WeightedGraph
             Vertex e = new Vertex() { Name = "E" };
 
             Graph g = new Graph();
-            g.AddEdge(a, b);
-            g.AddEdge(b, c);
-            g.AddEdge(b, d);
-            g.AddEdge(d, e);
+            g.AddEdge(a, b, 1);
+            g.AddEdge(b, c, 1);
+            g.AddEdge(b, d, 2);
+            g.AddEdge(d, e, 1);
+            g.AddEdge(c, e, 1);
+
+            g.FindPathDFS(a, e);
         }
     }
 }

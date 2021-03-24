@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace WeightedGraph
 {
@@ -7,19 +8,15 @@ namespace WeightedGraph
     {
         public Graph()
         {
-            Edges = new List<Edge>();
-            Vertexes = new List<Vertex>();
+            _edges = new List<Edge>();
+            _vertexes = new List<Vertex>();
         }
 
-        private List<Edge> Edges {get;}
-
-        private List<Vertex> Vertexes {get;}
-
-        public void AddEdge(Vertex source, Vertex destination)
+        public void AddEdge(Vertex source, Vertex destination, int weight)
         {
             bool sourceExists = false;
             bool destinationExits = false;
-            foreach (var vertex in Vertexes)
+            foreach (var vertex in _vertexes)
             {
                 if (vertex.Name == source.Name)
                     sourceExists = true;
@@ -28,13 +25,13 @@ namespace WeightedGraph
             }
 
             if (!sourceExists)
-                Vertexes.Add(source);
+                _vertexes.Add(source);
 
             if (!destinationExits)
-                Vertexes.Add(destination);
+                _vertexes.Add(destination);
 
-            var edge = new Edge() { Source = source, Destination = destination };
-            Edges.Add(edge);
+            var edge = new Edge() { Source = source, Destination = destination, Weight = weight };
+            _edges.Add(edge);
 
             source.AddEdge(edge);
         }
@@ -54,14 +51,25 @@ namespace WeightedGraph
 
                 Console.Write(" --> ");
 
-                foreach (var vertex in current.GetDestinations())
+                var edges = current.GetEdges();
+
+                int min = int.MaxValue;
+                Vertex v = null;
+                foreach (var edge in edges)
                 {
-                    queue.Enqueue(vertex);
+                    if(edge.Weight < min)
+                    {
+                        min = edge.Weight;
+                        v = edge.Destination;
+                    }
                 }
+                
+                if(v != null)
+                    queue.Enqueue(v);
             }
         }
 
-        public void FindPathDFS(Vertex source, Vertex desination)
+        public void FindPathDFS(Vertex source, Vertex destination)
         {
             Stack<Vertex> stack = new Stack<Vertex>();
             stack.Push(source);
@@ -72,16 +80,21 @@ namespace WeightedGraph
 
                 Console.Write(current.Name);
 
-                if (current.Name == desination.Name)
+                if (current.Name == destination.Name)
                     return;
 
                 Console.Write(" --> ");
 
-                foreach (var vertex in current.GetDestinations())
+                var orderedEdges = current.GetEdges().OrderByDescending(x => x.Weight);
+
+                foreach (var vertex in orderedEdges)
                 {
-                    stack.Push(vertex);
+                    stack.Push(vertex.Destination);
                 }
             }
         }
+
+        private List<Edge> _edges {get;}
+        private List<Vertex> _vertexes {get;}
     }
 }
