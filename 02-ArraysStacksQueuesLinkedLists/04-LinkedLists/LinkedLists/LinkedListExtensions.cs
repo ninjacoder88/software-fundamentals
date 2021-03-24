@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace LinkedLists
 {
     public static class LinkedListExtensions

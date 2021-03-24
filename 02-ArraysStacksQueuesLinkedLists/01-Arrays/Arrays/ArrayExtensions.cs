@@ -1,3 +1,5 @@
+using System;
+
 namespace Arrays
 {
     public static class ArrayExtensions

@@ -1,3 +1,5 @@
+using System;
+
 namespace Conditionals
 {
     public class ElseStatements
@@ -5,6 +7,8 @@ namespace Conditionals
         public void Example()
         {
             Console.WriteLine("Start");
+
+            var result = 2 + 3;
 
             if(result == 5)
             {

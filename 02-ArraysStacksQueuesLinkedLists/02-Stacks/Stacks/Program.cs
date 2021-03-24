@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Stacks
 {
@@ -6,25 +7,25 @@ namespace Stacks
     {
         public static void Main(string[] args)
         {
-            Stack<string> stack = new Stack<string>();
-            stack.Push("A");
-            stack.Push("B");
-            stack.Pop();
-            stack.Push("C");
-            stack.Pop();
-            stack.Pop();
+            Stack<string> strStack = new Stack<string>();
+            strStack.Push("A");
+            strStack.Push("B");
+            strStack.Pop();
+            strStack.Push("C");
+            strStack.Pop();
+            strStack.Pop();
 
-            stack.Print();
+            strStack.Print();
 
-            Stack<int> stack = new Stack<int>();
-            stack.Push(1);
-            stack.Push(2);
-            stack.Pop();
-            stack.Push(3);
-            stack.Pop();
-            stack.Pop();
+            Stack<int> intStack = new Stack<int>();
+            intStack.Push(1);
+            intStack.Push(2);
+            intStack.Pop();
+            intStack.Push(3);
+            intStack.Pop();
+            intStack.Pop();
 
-            stack.Print();
+            intStack.Print();
 
         }
     }
