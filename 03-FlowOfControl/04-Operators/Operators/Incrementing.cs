@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace FlowOfControl
+namespace Operators
 {
-    class Program
+    public class Incrementing
     {
-        static void Main(string[] args)
+        public void Example()
         {
             Console.WriteLine("Start");
 
