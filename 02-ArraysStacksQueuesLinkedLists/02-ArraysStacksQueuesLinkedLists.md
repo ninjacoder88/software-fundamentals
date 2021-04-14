@@ -1,8 +1,7 @@
-**What is an array?**
-A data structure that holds a group of items
+# Data Structures (Arrays, Stacks, Queues, and Linked Lists)
 
-**What is an array used for?**
-Managing a list of data
+**What is an array?**
+An array is a data structure that manages a collection of items
 
 ## Demo
 

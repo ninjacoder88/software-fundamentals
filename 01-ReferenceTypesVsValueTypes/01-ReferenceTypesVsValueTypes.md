@@ -1,21 +1,24 @@
 # Reference Types vs Value Types
 
 **What is a type?**
-It is a representation of data such as a number, string, boolean, or real world object
+A type is a representation of data.
 
-**What are some data types?**
-integer - whole number
+**What sort of data can be represented in software?**
+Numbers, strings, booleans, with everything falling into "objects"
+
+**What are some data types in C# and what do they represent?**
+integer (int) - whole number
 long - big whole number
 float - floating point number
 double - big floating point number
 decimal - precision number
 char - a single character
-string - N characters (a word)
+string - N characters (a word/phrase/sentence/etc)
 bool - boolean (true/false)
 object
 
-**Which of those types are value types?**
-integer
+**What are the commonly used value types?**
+integer (int)
 long
 float
 double
@@ -24,18 +27,22 @@ char
 bool
 
 **Which of those types are reference types?**
-string
+string __kind of__
 object
 
 **What is a value type?**
-It is a data type that is stores the actual value
-__Typically__ value types are stored directly on the application stack, but there are exceptions
-A value type is copied from one place to another
+A value type is a data type where the actual value is stored __on the application stack__ and is immuatable (meaning the value can't be changed)
+You will often hear that value types are stored on the stack, but that is not always true.
+A vaule type is copied from one memory location to another
 
 **What is a reference type?**
-It is a data type that stores a reference to the actual value
-__Typically__ reference types are stored in the application heap, but there are exceptions
-A reference type copies the reference not the value
+A reference type is a data type where the actual value is stored __in the application heap__ and a reference to that object is stored __on the application stack__
+A reference to the object is stored and the reference is copied not the object.
+You will often hear that reference types are stored on the heap, but there are exceptions.
+
+**Why are strings "kind of" reference types?**
+Strings are special case reference types in that the data is stored on the heap because a string can be very large (in terms of memory) so we don't want to blow up the stack (stack overflow), however similar to value types, we want our strings to be immuatable
+
 
 ## Demo
 
@@ -77,6 +84,4 @@ What should the value of i going to be?
 Why is the value of i different here compared to the value type demo?
 
 **Closing the Loop**
-- Strings are special case reference types in that they are handles like value types
-- Strings are a reference type because they are essentially unlimited in size but a value type because we want them to be immuatable
 - The file extensions are .md which is markdown. It is a standard that formats documents using characters
