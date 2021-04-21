@@ -47,8 +47,7 @@ namespace BuilderDemo
         {
             return new WhereQueryBuilder(_query).WhereEquals(whereColumnWithAlias, value);
         }
-
-        private Dictionary<string, string> _aliasDictionary;
+        
         private string _query;
     }
 

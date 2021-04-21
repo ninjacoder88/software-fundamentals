@@ -11,7 +11,7 @@ namespace FacadeDemo
             CreditCheck creditCheck = new CreditCheck();
 
             ManufacturingRequest r = new ManufacturingRequest(biosecurity, manufacturability, creditCheck);
-            r.CanProcess();
+            //r.CanProcess();
         }
     }
 }
