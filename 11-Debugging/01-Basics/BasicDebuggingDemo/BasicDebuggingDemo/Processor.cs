@@ -19,8 +19,12 @@ namespace BasicDebuggingDemo
             var items = new List<Item>();
             foreach (var fileLine in fileLines)
             {
-                string[] splitFileLine = fileLine.Split(new[] {"|"}, StringSplitOptions.None);
+                Console.WriteLine($"fileLine: {fileLine}");
 
+                string[] splitFileLine = fileLine.Split(new[] {"|"}, StringSplitOptions.None);
+                
+                Console.WriteLine($"splitFileLine[0]: {splitFileLine[0]}");
+                
                 items.Add(new Item
                               {
                                   Id = int.Parse(splitFileLine[0]),

@@ -6,7 +6,9 @@ namespace BasicDebuggingDemo
     {
         static void Main(string[] args)
         {
-            new Processor(new Logger()).Process(@"C:\code\software-fundamentals\11-Debugging\01-Basics\data\data.csv", 5);
+            new Processor(new Logger())
+                .Process(@"C:\code\software-fundamentals\11-Debugging\data\data.csv", 5);
+            Console.ReadLine();
         }
     }
 }

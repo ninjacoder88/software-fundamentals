@@ -10,6 +10,7 @@ namespace ExternalDebuggingDemo
         {
             var processor = new Processor(new Logger());
             processor.Process(@"C:\code\software-fundamentals\11-Debugging\data\data3.csv", 5);
+            Console.ReadLine();
         }
     }
 }

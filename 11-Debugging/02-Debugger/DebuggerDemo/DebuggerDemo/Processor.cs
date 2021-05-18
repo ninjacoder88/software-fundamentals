@@ -21,12 +21,14 @@ namespace DebuggerDemo
             {
                 string[] splitFileLine = fileLine.Split(new[] {"|"}, StringSplitOptions.None);
 
+                decimal price = decimal.Parse(splitFileLine[3]);
+                
                 items.Add(new Item
                               {
                                   Id = int.Parse(splitFileLine[0]),
                                   Name = splitFileLine[1],
                                   Description = splitFileLine[2],
-                                  Price = decimal.Parse(splitFileLine[3])
+                                  Price = price
                               });
             }
 
@@ -36,9 +38,9 @@ namespace DebuggerDemo
             {
                 int quantity = groupOfItems.Count();
                 if(quantity <= minimumQuantity)
-                    _logger.Log($"{groupOfItems.Key} - {quantity}");
-                else
                     _logger.Log($"{groupOfItems.Key} - {quantity} - REORDER");
+                else
+                    _logger.Log($"{groupOfItems.Key} - {quantity}");
             }
         }
 

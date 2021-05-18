@@ -17,6 +17,8 @@ namespace ExternalProject
         {
             string[] fileLines = File.ReadAllLines(filePath);
 
+            var list = fileLines.ToList();
+            
             var items = new List<Item>();
             foreach (var fileLine in fileLines)
             {
