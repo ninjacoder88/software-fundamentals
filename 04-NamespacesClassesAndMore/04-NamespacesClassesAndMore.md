@@ -70,5 +70,4 @@ namespace NamespacesClassesAndMore
 A way to control what can see an work with your data, whether that be a class, method, or variable/constant
 
 **What is an interface?**
-
-**What are generics?**
+Interfaces are specifications as to what classes properties and methods must implemented

@@ -82,10 +82,20 @@ while(queue.Count)
 	queue.Dequeue();
 }
 
+
+int whileCounter = 5;
+while(whileCounter < 3)
+{
+	Console.WriteLine(whileCounter);
+	whileCounter++;
+}
+
+int doWhileCounter = 5;
 do
 {
-
-} while()
+	Console.WriteLine(doWhileCounter);
+	doWhileCounter++;
+} while(doWhileCounter < 3)
 ```
 
 break, continue

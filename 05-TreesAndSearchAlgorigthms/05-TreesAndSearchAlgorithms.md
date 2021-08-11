@@ -117,6 +117,23 @@ public void DisplayDFSRecursive(Node node)
 		
 	Console.WriteLine($"Stop {node.Value}");
 }
+
+public void Dive(string path)
+{
+    DirectoryInfo directoryInfo = new DirectoryInfo(path);
+
+    var projectFiles = directoryInfo.EnumerateFiles(*.csproj);
+    foreach(var projectFile in projectFiles)
+    {
+        Console.WriteLine(projectFile.Name);
+    }
+
+    var directories = directoryInfo.EnumerateDirectories();
+    foreach(var directory in directories)
+    {
+        Dive(directory.FullName);
+    }
+}
 ```
 
 **What are generics?**
