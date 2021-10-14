@@ -7,14 +7,14 @@ A type is a representation of data.
 Numbers, strings, booleans, with everything falling into "objects"
 
 **What are some data types in C# and what do they represent?**
-integer (int) - whole number
-long - big whole number
-float - floating point number
-double - big floating point number
-decimal - precision number
-char - a single character
-string - N characters (a word/phrase/sentence/etc)
-bool - boolean (true/false)
+integer (int) - whole number => 2,147,483,647
+long - big whole number => 18,446,744,073,709,551,615
+float - floating point number 
+double - big floating point number => 10001.11010011
+decimal - precision number => 123.45
+char - a single character => A 1 $
+string - N characters (a word/phrase/sentence/etc) => "A sentenence"
+bool - boolean => true/false
 object
 
 **What are the commonly used value types?**

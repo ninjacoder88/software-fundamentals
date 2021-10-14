@@ -109,7 +109,7 @@ Search algorithms and sorting algorithms are the most frequent users of recursio
 public void DisplayDFSRecursive(Node node)
 {
     Console.WriteLine($"Start {node.Value}");
-    if(node.Left != null)
+    if(node.Left != null)  
         DisplayDFSRecursive(node.Left);
         
     if(node.Right != null)

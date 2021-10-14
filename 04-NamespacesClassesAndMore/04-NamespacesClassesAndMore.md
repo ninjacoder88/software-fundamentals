@@ -1,5 +1,5 @@
 **What are namespaces?**
-A way to organize classes
+A way to organize classes and create scope
 
 **What are classes?**
 A representation of a thing or idea.

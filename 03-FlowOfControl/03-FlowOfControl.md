@@ -4,7 +4,7 @@ Flow of control is how the program flows and how to make decision
 if, else, switch
 
 # Demo
-```
+~~~
 Console.WriteLine("Start");
 
 int a = 2;
@@ -47,12 +47,12 @@ switch(result)
 		Console.WriteLine("Not Handled");
 		break;
 
-```
+~~~
 
 for, foreach, while, do...while
 
 # Demo
-```
+~~~
 for(int i = 0; i < 10; i++)
 {
 	if(i % 2 == 0)
@@ -96,7 +96,7 @@ do
 	Console.WriteLine(doWhileCounter);
 	doWhileCounter++;
 } while(doWhileCounter < 3)
-```
+~~~
 
 break, continue
 
